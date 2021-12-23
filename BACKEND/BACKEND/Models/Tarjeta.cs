@@ -9,17 +9,17 @@ namespace BACKEND.Models
         public int Id { get; set; }
         [Required]
         [Column(TypeName = "varchar(100)")]
-        public int Titular { get; set; }
+        public string Titular { get; set; }
         [Required]
         [Column(TypeName="varchar(16)")]
-        public int Numero { get; set; }
+        public string Numero { get; set; }
 
         [Required]
         [Column(TypeName = "varchar(5)")]
-        public int FechaExpiracion{ get; set; }
+        public string FechaExpiracion { get; set; }
 
         [Required]
         [Column(TypeName = "varchar(3)")]
-        public int Cvv { get; set; }
+        public string Cvv { get; set; }
     }
 }
