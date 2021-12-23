@@ -1,7 +1,10 @@
 /* You can add global styles to this file, and also import other style files */
-input.ng-invalid{
+input.ng-touched.ng-invalid{
     border-color: #dc3445;
 }
-input.ng-valid{
+input.ng-touched.ng-valid{
     border-color: #28a745;
+}
+._ngcontent-ide-c52{
+    color: #28a745;
 }

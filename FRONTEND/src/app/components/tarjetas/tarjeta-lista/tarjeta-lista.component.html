@@ -1,1 +1,24 @@
-<p>tarjeta-lista works!</p>
+<table class="table table-inverse table-responsive text-center">
+    <thead class="thead-inverse">
+        <tr>
+            <th>Titular</th>
+            <th>Número</th>
+            <th>Fecha de expiración</th>
+            <th>CVV</th>
+            <th>Acciones</th>
+        </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let tarjeta of TarjetaService.tarjetas">  
+                <td>{{tarjeta.titular}}</td>
+                <td>{{tarjeta.numero}}</td>
+                <td>{{tarjeta.fechaExpiracion}}</td>
+                <td>{{tarjeta.cvv}}</td>
+                <td>
+                    <i class="fas fa-edit text-warning" (click)="editarTarjeta(tarjeta)" style="cursor: pointer;" ></i>
+                    <i class="fas fa-trash text-danger" (click)="eliminarTarjeta(tarjeta.id)" style="cursor: pointer;" ></i>
+                </td>
+            </tr>
+          
+        </tbody>
+</table>
