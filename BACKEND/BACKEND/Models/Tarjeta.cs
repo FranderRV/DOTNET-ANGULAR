@@ -8,6 +8,9 @@ namespace BACKEND.Models
         [Key]
         public int Id { get; set; }
         [Required]
+        [Column(TypeName = "varchar(100)")]
+        public int Titular { get; set; }
+        [Required]
         [Column(TypeName="varchar(16)")]
         public int Numero { get; set; }
 

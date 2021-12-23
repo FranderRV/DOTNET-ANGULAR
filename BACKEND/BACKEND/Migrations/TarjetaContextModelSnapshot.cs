@@ -41,6 +41,10 @@ namespace BACKEND.Migrations
                         .IsRequired()
                         .HasColumnType("varchar(16)");
 
+                    b.Property<string>("Titular")
+                        .IsRequired()
+                        .HasColumnType("varchar(100)");
+
                     b.HasKey("Id");
 
                     b.ToTable("Tarjeta");

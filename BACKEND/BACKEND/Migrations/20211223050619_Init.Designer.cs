@@ -11,7 +11,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace BACKEND.Migrations
 {
     [DbContext(typeof(TarjetaContext))]
-    [Migration("20211223030442_Init")]
+    [Migration("20211223050619_Init")]
     partial class Init
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -42,6 +42,10 @@ namespace BACKEND.Migrations
                     b.Property<string>("Numero")
                         .IsRequired()
                         .HasColumnType("varchar(16)");
+
+                    b.Property<string>("Titular")
+                        .IsRequired()
+                        .HasColumnType("varchar(100)");
 
                     b.HasKey("Id");
 
